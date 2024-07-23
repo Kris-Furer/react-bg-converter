@@ -8,12 +8,14 @@ export default function Home() {
   const [mgdl, setMgdl] = useState('');
 
   const handleMgdlInput = (event) => {
+    const roundedValue = Math.round(event.target.value / 18)
     setMgdl(event.target.value)
-    setmmol(event.target.value / 18);
+    setmmol(roundedValue);
   }
   const handleMmolInput = (event) => {
+    const roundedValue = Math.round(event.target.value * 18)
     setmmol(event.target.value)
-    setMgdl(event.target.value * 18);
+    setMgdl(roundedValue)
   }
 
   return (
