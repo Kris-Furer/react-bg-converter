@@ -10,14 +10,8 @@ export default function Home() {
   const [mgdl, setMgdl] = useState('');
   const [lastUpdated, setLastUpdated] = useState('');
 
-  const convertToMgdl = (inputValue) => {
-    const convertedValue = Math.round(inputValue * 18)
-    return convertedValue;
-  }
-  const convertToMmol = (inputValue) => {
-    const convertedValue = Math.round(inputValue / 18)
-    return convertedValue;
-  }
+  const convertToMgdl = (inputValue) => Math.round(inputValue * 18);
+  const convertToMmol = (inputValue) => Math.round(inputValue / 18);
 
   const handleMgdlInput = (event) => {
     setMgdl(event.target.value)
