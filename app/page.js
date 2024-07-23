@@ -20,14 +20,7 @@ export default function Home() {
     <main className="p-7 flex justify-center">
       <div className="max-w-2xl">
       <h1 className="text-5xl py-6">BG CONVERTER</h1>
-      {/* MMOL INPUT -------------------------- */}
-      <Input
-        onChange={() => { handleMmolInput(event) }}
-        id='mmolValue'
-        name='mmolValue'
-        type="number"
-        label="mmol/L"
-        value={mmol} />
+ 
       
       {/* Mgdl INPUT -------------------------- */}
       <Input
@@ -37,6 +30,15 @@ export default function Home() {
         name="mgdlValue"
         value={mgdl}
         type="number" />
+
+             {/* MMOL INPUT -------------------------- */}
+      <Input
+        onChange={() => { handleMmolInput(event) }}
+        id='mmolValue'
+        name='mmolValue'
+        type="number"
+        label="mmol/L"
+        value={mmol} />
         </div>
     </main>
   );
